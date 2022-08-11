@@ -1,10 +1,13 @@
 import "./loadEnvironment";
 import Debug from "debug";
 import express from "express";
+import chalk from "chalk";
 
-const debug = Debug("mi-api:index");
+const debug = Debug("my-api:index");
 const app = express();
 
-app.listen(4000, () => {});
+const port = process.env.PORT;
 
-debug("assdafdf");
+app.listen(port, () => {
+  debug(chalk.blue(`Serve listening on http://localhost/:${port}`));
+});
