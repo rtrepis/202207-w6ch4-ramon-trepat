@@ -1,7 +1,7 @@
 const things = [
   {
     id: "1",
-    thing: "algo",
+    thing: "algo no",
   },
   {
     id: "2",
