@@ -1,4 +1,9 @@
-const things = [
+interface Thing {
+  id: string;
+  thing: string;
+}
+
+const things: Thing[] = [
   {
     id: "1",
     thing: "algo no",
