@@ -16,18 +16,19 @@ export const thingsGetId = (req: Request, res: Response) => {
   const getId = things.filter((item) => item.id === idThing);
 
   if (getId.length === 0) {
+    debug(chalk.blue(`Controller thingsGetID: ${idThing} not found`));
     res.status(404).json({ error: "Id not found" });
     return;
   }
 
   if (getId.length > 1) {
-    res.status(404).json({ error: "Is very big problem in the server" });
+    debug(chalk.red(`Controller thingsGetID: ${idThing} repeated`));
+    res.status(500).json({ error: "Is 'littel' problem in the server" });
     return;
   }
 
+  debug(chalk.green(`Controller thingsGetID: ${idThing} return `));
   res.status(200).json(getId);
-
-  debug(chalk.green("The good get return method"));
 };
 
 export default thingsGet;
