@@ -7,13 +7,15 @@
     "ts": "tsc",
     "ts:dev": "tsc -w",
     "start": "node .",
-    "start:dev": "nodemon -q"
+    "start:dev": "nodemon -q",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.13",
     "@types/node": "^18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
@@ -23,10 +25,12 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.19",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "debug": "^4.3.4",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
   }
 }
